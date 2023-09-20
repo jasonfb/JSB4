@@ -5,11 +5,13 @@
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^7.3.0",
     "esbuild": "^0.19.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "failure:js": "rm ./app/assets/builds/application.js && rm ./app/assets/builds/application.js.map", 
-    "compile:typescript": "tsc-watch --noClear -p tsconfig.json --onSuccess 'yarn build' --onFailure 'yarn failure:js'", 
+    "failure:js": "rm ./app/assets/builds/application.js && rm ./app/assets/builds/application.js.map",
+    "compile:typescript": "tsc-watch --noClear -p tsconfig.json --onSuccess 'yarn build' --onFailure 'yarn failure:js'",
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
   },
   "devDependencies": {

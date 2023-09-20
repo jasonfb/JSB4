@@ -1,2 +1,2 @@
-web: env RUBY_DEBUG_OPEN=true bin/rails server
+web: env RUBY_DEBUG_OPEN=true bin/rails s -b 'ssl://0.0.0.0:3000?key=config/ssl/abc.localhost.key&cert=config/ssl/abc.localhost.crt'
 js: yarn compile:typescript --watch
