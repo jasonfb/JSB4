@@ -8,6 +8,8 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
+    "failure:js": "rm ./app/assets/builds/application.js && rm ./app/assets/builds/application.js.map", 
+    "compile:typescript": "tsc-watch --noClear -p tsconfig.json --onSuccess 'yarn build' --onFailure 'yarn failure:js'", 
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
   },
   "devDependencies": {
