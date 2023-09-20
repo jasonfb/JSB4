@@ -2,9 +2,7 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 
+import ReactOnRails from 'react-on-rails';
 
 import MyComponent from "./components/MyComponent"
-
-const myComponent = new MyComponent();
-
-document.querySelector("#my-app").innerHTML = myComponent.render();
+ReactOnRails.register({ MyComponent });
